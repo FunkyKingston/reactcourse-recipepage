@@ -1,0 +1,81 @@
+@import "./shared.scss"; // shared variables and styles
+
+@import "./Navbar.scss";
+@import "./Footer.scss";
+@import "./Pages.scss";
+@import "./Recipes.scss";
+
+
+:root {
+  font-size: $font-size; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// apply for every element on the page
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.wrapper { /* wrapper wraps the nav bar, .content-wrapper div, footer */
+  background: $bg-wrapper;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 90%; // max-width overrides width (and min-width overrides max-width)
+  flex: 1 0 auto; 
+  margin: 0 auto;
+  margin-top: $navbar-height;
+}
+
+.content-area {
+  width: $page-width;
+  max-width: 100%;
+  margin: 4rem 0;
+}
+
+// Horizontal line centered across div-element (.section-line) with header on top of it (.section-header)
+// - https://stackoverflow.com/questions/40697231/horizontal-line-in-the-middle-of-divs
+.section-header {
+  position: relative;
+  background: $bg-section-header;
+  color: #fff;
+  font-family: serif;
+  font-size: 1.28rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.section-line {
+  text-align: center;
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: flex-start;
+}
+
+.section-line:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid black;
+  background: black;
+  width: 100%;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// TO DO: Add media queries and make a mobile view with burger icon and dropdown menu for the Navbar and its links
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// @media (max-width: calc(12.5px * 80) ) {
+
+// }
+
+// @media (max-width: 768px ) {
+
+// }

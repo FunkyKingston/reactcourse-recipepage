@@ -1,0 +1,97 @@
+@import "./shared.scss"; // shared variables and styles
+
+.recipes-grid {
+  display: grid;
+  gap: 2.0rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.recipe-box {
+  position: relative;
+  background: $bg-box;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+
+  .img-thumbnail:hover {
+    background: #fff;
+    opacity: 0.9;
+  }
+
+  // TO DO: would be preferrable that the textbox below a recipe image take upp the whole space (of .recipe-box), also when the title 
+  //        fits in one line. - that is, such that "Preparation time: ..." is aligned vertically for all recipe boxes.
+  &-info { 
+    justify-content: flex-end;
+    padding: 0.5rem;
+    // h3, p {
+    //   padding: 0.4rem;
+    // }
+    a {
+      text-decoration: none;
+      color: $color-primary;
+      // &:hover {
+      //   text-decoration: underline;
+      // }
+    }
+  }
+  .hr-div {
+    width: 90%;
+    border-top: 2px solid rgb(239,242,245);
+    margin: 0.4rem auto;
+  }
+}
+
+.recipe-details {
+  position: relative;
+  background: $bg-box;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  img {
+    // padding: 0.5rem;
+    width: 50%;
+  }
+  .ul-ingredients {
+    list-style-type: bullets;
+    list-style-position: inside;
+  }
+  .ul-instructions {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+  .hr-div {
+    width: 98%;
+    border-top: 2px solid rgb(239,242,245);
+    margin: 0.6rem auto;
+  }
+}
+
+
+.toggle-saved-recipe {
+  // position: absolute; // relative to parent div due to the parent having position: relative; - https://tomelliott.com/html-css/css-position-child-div-parent
+  // top: 10px;
+  // left: 10px;
+  // right: 10px;
+  button {
+    margin: 0;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+  }
+  [data-saved=true] {
+    color: rgb(243,92,114);
+    &:hover {
+      color: rgb(228,87,109);
+    }
+  }
+  [data-saved=false] {
+    color: $color-primary;
+  }
+}
+
+#flex-row-space-between {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+

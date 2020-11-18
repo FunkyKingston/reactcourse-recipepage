@@ -1,0 +1,20 @@
+@import "./shared.scss"; // shared variables and styles
+
+.about, .cuisines {
+  background: $bg-box;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  h3, p {
+    margin-bottom: 0.2rem;
+  }
+  .hr-div {
+    width: 90%;
+    border-top: 2px solid rgb(239,242,245);
+    margin: 0.4rem auto;
+  }
+}
+
+p a {
+  color: $color-primary;
+}

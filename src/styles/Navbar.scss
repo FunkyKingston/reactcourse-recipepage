@@ -1,0 +1,79 @@
+@import "./shared.scss"; // shared variables and styles
+
+nav {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: $navbar-height;
+  // line-height: $navbar-height; // as a side effect achieves vertical centering within the navbar
+  background: $bg-nav;
+  font-family: sans-serif;
+  border-bottom: 2px solid rgb(239,242,245);
+  a {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+.nav-container {
+  width: calc(#{$page-width} + 10rem);
+  max-width: 95%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-left {
+    // line-height: $navbar-height; 
+    margin-right: auto;
+    display: flex;
+    align-items: center; // not having this will stretch out the logo image - it "wants to" fill the line-height of <nav>
+    justify-content: flex-start;
+    .nav-logo {
+      width: 2.8rem;
+      margin-right: 0.8rem;
+    }
+    .nav-header {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-right: 2.5rem;
+    }
+  }
+
+  &-right {
+    margin-left: auto;
+    display: flex;
+    justify-self: flex-end;
+    .nav-info {
+      font-size: 1.28rem;
+    }
+  }
+}
+
+
+// ul { // doesn't have the same effect, parent div apparently has to be specified (for the a {} tag)
+.nav-links {
+  font-size: 1.28rem;
+  ul {
+    display: flex;
+    li {
+      display: block; 
+      // font-weight: bold;
+      padding: 0 20px;
+    }
+  }
+}
+
+.savedrecipes-nav {
+  cursor: pointer;
+  background: rgb(243,92,114);
+  font-size: 1.0rem;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  &:hover {
+    background: rgb(228,87,109);
+  }
+}

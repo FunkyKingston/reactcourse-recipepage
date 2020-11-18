@@ -1,0 +1,15 @@
+@import "./shared.scss"; // shared variables and styles
+
+footer {
+  background: #f4f1ea;
+  height: 5rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  width: calc(#{$page-width} + 10rem);
+  max-width: 95%;
+  margin: auto;
+  margin-top: 0.5rem;
+}
