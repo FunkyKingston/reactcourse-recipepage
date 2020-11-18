@@ -4,8 +4,8 @@ import DisplayRecipes from '../layout/DisplayRecipes';
 
 // use data from .json-file during development, since the spoonacular API has a fixed daily quota of free calls
 import randomResultsLocalFile from './tmpdata/randomResults'; 
-// const useApi = 1;
-const useApi = 0;
+const useApi = 1;
+// const useApi = 0;
 
 class Home extends Component {
   state = {
